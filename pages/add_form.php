@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Dashboard</title>
     <?php include('../layout/style.php'); ?>
     <style>
-        /* Simplified styling */
         body {
             font-family: Cambria, serif;
             background-color: #ffffff;
@@ -114,8 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <label for="gender">Gender:</label>
                                 <select name="gender" required class="form-control">
-                                    <option value="Male">Male</option>
                                     <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
                                     <option value="Other">Other</option>
                                 </select>
 

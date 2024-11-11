@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'name' => $_POST['name'] ?? 'Not provided',
         'age' => $_POST['age'] ?? 'Not provided',
         'gender' => $_POST['gender'] ?? 'Not provided',
-        'college' => $_POST['college'] ?? 'Not provided',  // Make sure the form has a 'college' input
         'course' => $_POST['course'] ?? 'Not provided',
         'campus' => $_POST['campus'] ?? 'Not provided',
     ];
@@ -80,7 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <th>Name</th>
                                         <th>Age</th>
                                         <th>Gender</th>
-                                        <th>College</th>
                                         <th>Course</th>
                                         <th>Campus</th>
                                     </tr>
@@ -93,7 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             echo "<td>" . htmlspecialchars($student['name']) . "</td>";
                                             echo "<td>" . htmlspecialchars($student['age']) . "</td>";
                                             echo "<td>" . htmlspecialchars($student['gender']) . "</td>";
-                                            echo "<td>" . htmlspecialchars($student['college']) . "</td>";
                                             echo "<td>" . htmlspecialchars($student['course']) . "</td>";
                                             echo "<td>" . htmlspecialchars($student['campus']) . "</td>";
                                             echo "</tr>";

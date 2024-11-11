@@ -21,9 +21,6 @@ if(isset($_GET['logout']) && $_GET['logout'] == true){
 }
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
