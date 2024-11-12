@@ -10,11 +10,11 @@ if (!isset($_SESSION['students'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Add new student details to the students session array
     $_SESSION['students'][] = [
-        'name' => $_POST['name'] ?? 'Not provided',
-        'age' => $_POST['age'] ?? 'Not provided',
-        'gender' => $_POST['gender'] ?? 'Not provided',
-        'course' => $_POST['course'] ?? 'Not provided',
-        'campus' => $_POST['campus'] ?? 'Not provided',
+        'name' => htmlspecialchars($_POST['name'] ?? 'Not provided'),
+        'age' => htmlspecialchars($_POST['age'] ?? 'Not provided'),
+        'gender' => htmlspecialchars($_POST['gender'] ?? 'Not provided'),
+        'course' => htmlspecialchars($_POST['course'] ?? 'Not provided'),
+        'campus' => htmlspecialchars($_POST['campus'] ?? 'Not provided'),
     ];
 
     // Redirect to prevent form resubmission on page reload
@@ -31,9 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php include('../layout/style.php'); ?>
     <style>
         body {
-            font-family: 'Cambria', serif;
+            font-family: Cambria, serif;
+            background-color: #FFF0F5; /* Light Pink Background */
+            color: #DB7093; /* Pale Violet Red for text */
         }
         #datatablesSimple {
+            width: 100%;
             background-color: violet;
             color: white;
             border: 1px solid pink;
@@ -51,6 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         #datatablesSimple tr:hover {
             background-color: #f4a2d8; /* Light pink */
+        }
+        .no-data {
+            background-color: pink;
+            color: black;
+            font-weight: bold;
+            text-align: center;
         }
     </style>
 </head>
@@ -85,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 </thead>
                                 <tbody>
                                     <?php
-                                    if (isset($_SESSION['students']) && count($_SESSION['students']) > 0) {
+                                    if (!empty($_SESSION['students'])) {
                                         foreach ($_SESSION['students'] as $student) {
                                             echo "<tr>";
                                             echo "<td>" . htmlspecialchars($student['name']) . "</td>";
@@ -96,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             echo "</tr>";
                                         }
                                     } else {
-                                        echo "<tr><td colspan='6'>No data available.</td></tr>";
+                                        echo "<tr><td class='no-data' colspan='5'>No data available.</td></tr>";
                                     }
                                     ?>
                                 </tbody>

@@ -17,9 +17,10 @@
         <?php include('../layout/style.php')?>
         
         <style>
-            body, h1, h2, h3, h4, h5, h6, p, li, .breadcrumb-item, .card-body, .card-header, table, th, td {
-                font-family: 'Cambria', serif;
-                color: purple;
+            body {
+               font-family: Cambria, serif;
+               background-color: #FFF0F5; /* Light Pink Background */
+               color: #DB7093; /* Pale Violet Red for text */
             }
             .breadcrumb-item.active {
                 color: pink;

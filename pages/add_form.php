@@ -31,62 +31,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Dashboard</title>
     <?php include('../layout/style.php'); ?>
     <style>
-        body {
-            font-family: Cambria, serif;
-            background-color: #ffffff;
-            color: #800080;
-        }
+    body {
+        font-family: Cambria, serif;
+        background-color: #FFF0F5; /* Light Pink Background */
+        color: black; /* Pale Violet Red for text */
+    }
 
-        .card {
-            border: 1px solid #e0e0e0;
-        }
+    .card {
+        border: 1px solid #FFC0CB; /* Light Pink Border */
+    }
 
-        .card-header {
-            background-color: #800080;
-            color: #ffffff;
-        }
+    .card-header {
+        background-color: #FFB6C1; /* Soft Pink */
+        color: #ffffff; /* White Text */
+    }
 
-        label {
-            color: #800080;
-            font-weight: bold;
-            font-family: Cambria, serif;
-        }
+    label {
+        color: #DB7093; /* Pale Violet Red for labels */
+        font-weight: bold;
+        font-family: Cambria, serif;
+    }
 
-        .form-control {
-            border: 1px solid #800080;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            font-family: Cambria, serif;
-        }
+    .form-control {
+        border: 1px solid #FFB6C1; /* Light Pink Border */
+        border-radius: 4px;
+        margin-bottom: 10px;
+        font-family: Cambria, serif;
+    }
 
-        .btn-primary {
-            background-color: #ff69b4;
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-        }
+    .btn-primary {
+        background-color: #FFB6C1; /* Soft Pink Button */
+        color: #ffffff; /* White Text */
+        border: none;
+        border-radius: 4px;
+    }
 
-        .btn-primary:hover {
-            background-color: #dda0dd;
-        }
+    .btn-primary:hover {
+        background-color: #FFC0CB; /* Lighter Pink on Hover */
+    }
 
-        footer {
-            background-color: #800080;
-            color: #ffffff;
-            font-family: Cambria, serif;
-            padding: 1rem;
-            text-align: center;
-        }
+    footer {
+        background-color: #FFB6C1; /* Soft Pink Footer */
+        color: #ffffff; /* White Text */
+        font-family: Cambria, serif;
+        padding: 1rem;
+        text-align: center;
+    }
 
-        footer a {
-            color: #ff69b4;
-            text-decoration: none;
-        }
+    footer a {
+        color: #ffffff; /* White Links */
+        text-decoration: none;
+    }
 
-        footer a:hover {
-            color: #dda0dd;
-        }
-    </style>
+    footer a:hover {
+        color: #FFC0CB; /* Lighter Pink on Hover */
+    }
+
+    .form-container {
+        width: 80%;
+        max-width: 500px; /* Limit the form width */
+        margin: 50px auto; /* Center the form horizontally and give some top margin */
+        padding: 20px;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    /* Center the form-container within the layout */
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+</style>
 </head>
 <body class="sb-nav-fixed">
 
@@ -113,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <label for="gender">Gender:</label>
                                 <select name="gender" required class="form-control">
-                                    <option value=""disabled selected>Select Gender</option>
+                                    <option value="" disabled selected>Select Gender</option>
                                     <option value="Female">Female</option>
                                     <option value="Male">Male</option>
                                     <option value="Other">Other</option>
@@ -121,15 +140,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <label for="course">Course:</label>
                                 <select name="course" required class="form-control">
-                                    <option value="BSIS">BSIS</option>
-                                    <option value="BSTM">BSTM</option>
-                                    <option value="BEED">BEED</option>
-                                    <option value="POLSCI">POLSCI</option>
-                                    <option value="BSAIS">BSAIS</option>
+                                    <option value="" disabled selected>Select Course</option>
+                                    <option value="Bachelor of Science in Information System">Bachelor of Science in Information System</option>
+                                    <option value="Bachelor of Science in Tourism Management">Bachelor of Science in Tourism Management</option>
+                                    <option value="Bachelor of Elementary Education">Bachelor of Elementary Education</option>
+                                    <option value="Bachelor in Political Science">Bachelor in Political Science</option>
+                                    <option value="Bachelor of Science in Accountancy and Information System">Bachelor of Science in Accountancy and Information System</option>
                                 </select>
 
                                 <label for="campus">Campus:</label>
                                 <select name="campus" required class="form-control">
+                                    <option value="" disabled selected>Select Campus</option>
                                     <option value="Santa Cruz Campus">Santa Cruz Campus</option>
                                     <option value="Torrijos Campus">Torrijos Campus</option>
                                     <option value="Gasan Campus">Gasan Campus</option>

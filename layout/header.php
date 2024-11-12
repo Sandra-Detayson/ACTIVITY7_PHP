@@ -1,56 +1,36 @@
 <style>
-    /* Style for the navbar */
-    .sb-topnav {
-        background-color: #ff69b4; /* Pink background */
-        color: #ffffff; /* White text */
-        font-family: Cambria, serif; /* Font family set to Cambria */
-    }
+/* Navbar */
+.navbar {
+    background-color: #FFB6C1; /* Light pink background for the navbar */
+    padding: 10px 20px; /* Adjust spacing around the navbar */
+}
 
-    .sb-topnav .navbar-brand {
-        color: #ffffff; /* White text for the brand name */
-        font-weight: bold; /* Make the brand name bold */
-    }
+.navbar .form-inline .form-control {
+    border: 1px solid #FF69B4; /* Pink border for input */
+    border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+    padding: 8px;
+    font-family: Cambria, serif;
+}
 
-    .sb-topnav .navbar-brand:hover {
-        color: #dda0dd; /* Light purple hover effect for the brand */
-    }
+.navbar .input-group .btn {
+    background-color: #FF69B4; /* Pink background for search button */
+    color: #ffffff; /* White color for button text and icon */
+    border: none;
+    border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+}
 
-    .sb-topnav .nav-link {
-        color: #ffffff; /* White text for nav links */
-    }
+.navbar .input-group .btn:hover {
+    background-color: #FFC0CB; /* Lighter pink on hover */
+    color: #ffffff;
+}
 
-    .sb-topnav .nav-link:hover {
-        color: #ff80bf; /* Lighter pink on hover */
+/* Adjust spacing in larger screens */
+@media (min-width: 768px) {
+    .navbar .form-inline {
+        margin-right: 20px; /* Space between search bar and right edge */
     }
-
-    .sb-topnav .navbar-nav .nav-item .dropdown-menu {
-        background-color: #ff69b4; /* Pink background for dropdown */
-        color: #ffffff; /* White text for dropdown items */
-    }
-
-    .sb-topnav .navbar-nav .nav-item .dropdown-menu .dropdown-item {
-        color: #ffffff; /* White text for dropdown items */
-    }
-
-    .sb-topnav .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
-        background-color: #dda0dd; /* Light purple hover effect for dropdown items */
-    }
-
-    .sb-topnav .input-group input {
-        background-color: #f8f9fa; /* Light background for input */
-        border-color: #ff69b4; /* Pink border for input */
-    }
-
-    .sb-topnav .input-group button {
-        background-color: #ff69b4; /* Pink button */
-        color: #ffffff; /* White text on button */
-    }
-
-    .sb-topnav .input-group button:hover {
-        background-color: #ff80bf; /* Lighter pink on hover */
-    }
+}
 </style>
-
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
     <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
